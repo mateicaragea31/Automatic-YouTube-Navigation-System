@@ -1,0 +1,25 @@
+ main.py:
+- n-am intampinat nicio eroare majora, doar apelez funcțiile create separat si intiez căutarea si selectarea videoclipului (voi muta acest proces într-un fișier separat)
+
+ audio_recording.py:
+- n-am intampinat probleme, am urmărit tutoriatul sugerat in pdf-ul trimis si am adaptat codul pentru aplicația mea
+
+ screen_recording.py
+- am urmarit tutorial primit in pdf, insa am in continuare probleme cu înregistrarea ecranului, video-ul salvat este corupt si apare ca având 0.5 bytes, iar debug-ul din ffpmeg sugerează ca are 0 secunde; videoclip-ul era salvat in format .avi cu codec-ul XVID
+- am încercat schimbarea codecului in h.264/mp4v si salvarea fișierului in mp4, insa tot primesc aceeași eroare
+- voi incerca rularea codului pe un calculator cu intel; in prezent, proiectul e făcut pe macOS cu arm64
+
+ merge_video_audio.py:
+- nu funcționează datorită esuarii funcției de screen recording
+
+accept_terms.py
+- am intampinat probleme in găsirea butonului de Accept all/ Reject all
+- am dat inspect pe pop up-ul de termeni si condiții si am găsit id-ul corect al butonului;  primeam mesajul ca a fost apăsat butonul cu succes, insa programul imi da crash imediat după
+- am adăugat un time.sleep(5) după apelarea funcției si a funcționat, problema a fost ca nu îmi găsea search bar-ul după acceptare si se închidea programul
+
+skip_premium.py
+-nu am intampinat probleme
+
+internet_check.py
+- functia functia cum trebuie, insa celelalte funcții nu se mai apelau
+- am intrdus-o într-un thread ce rulează in permanentă in background, iar acum funcția îmi verifica odată la 5 secunde conexiunea la internet si abandonează programul cu un mesaj corespunzător in caz contrar 
