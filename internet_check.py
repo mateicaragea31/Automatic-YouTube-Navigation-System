@@ -1,8 +1,9 @@
-#importarea librariilor necesare
+# importarea librariilor necesare
 import requests
 import time
 import threading
 import sys
+from logging_config import log_message, log_error, log_warning, log_debug
 
 class NoInternetConnectionError(Exception):
     pass
@@ -16,7 +17,6 @@ def check_internet_connection():
     except (requests.ConnectionError, requests.exceptions.Timeout):
         raise NoInternetConnectionError("Nu a fost detectata conexiune la internet.")
 
-
 # verifica periodic conexiunea la internet in background
 def monitor_connection(driver):
     while True:
@@ -24,9 +24,9 @@ def monitor_connection(driver):
             check_internet_connection()
             time.sleep(5)  # verifica la fiecare 5 secunde
         except NoInternetConnectionError as e:
-            print(str(e))  # afiseaza eroarea
-            print("Conexiunea la internet a fost pierduta. inchide programul.")
+            log_error(f"{str(e)} Conexiunea la internet a fost pierduta. Inchide programul.")
 
             # inchide browserul si opreste programul
             driver.quit()
+            log_message("Browserul a fost inchis din cauza lipsei conexiunii la internet.")
             exit()
