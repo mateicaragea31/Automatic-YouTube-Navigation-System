@@ -1,0 +1,14 @@
+threading
+os
+selenium
+time
+pydub
+sounddevice
+soundfile
+requests
+sys
+logging
+ffmpeg
+numpy
+cv2
+mss
