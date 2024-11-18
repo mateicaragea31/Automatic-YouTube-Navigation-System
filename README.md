@@ -34,4 +34,24 @@ pip install -r requirements.txt
 ```
 
 ### ChromeDriver
-Ensure that the ChromeDriver executable is installed and accessible. You can download it from [ChromeDriver Downloads](https://developer.chrome.com/docs/chromedriver/downloads) and place it in <b>/usr/local/bin</b> or update the path in <b>initialize_driver.</b>
+Ensure that the ChromeDriver executable is installed and accessible. You can download it from [ChromeDriver Downloads](https://developer.chrome.com/docs/chromedriver/downloads) and place it in <b>/usr/local/bin</b> or update the path in <b>initialize_driver</b>
+
+### Download ffmpeg
+https://ffmpeg.org/download.html
+
+### Usage
+- Clone this repository:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+- Update the <b>chromedriver_path</b> in <b>initialize_driver</b> if needed
+- Run the main script:
+```bash
+python main.py
+```
+
+### Notes
+- Adjust the recording duration and FPS in main.py as needed
+- Ensure the device_index is selected according to your system's devices
+- Ensure FFmpeg is installed on your system
