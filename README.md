@@ -42,8 +42,8 @@ https://ffmpeg.org/download.html
 ### Usage
 - Clone this repository:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/mateicaragea31/Automatic-YouTube-Navigation-System.git
+cd Automatic-YouTube-Navigation-System
 ```
 - Update the <b>chromedriver_path</b> in <b>initialize_driver</b> if needed
 - Run the main script:
